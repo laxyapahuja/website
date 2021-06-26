@@ -11,9 +11,13 @@
     .navtext {
         color: #666666;
         font-size: 18px;
-        padding: 18px;
+        padding: 30px;
         text-decoration: none;
         font-weight: 400;
+    }
+    .navtext:hover {
+        color: #000000;
+        font-weight: 500;
     }
     .navdiv {
         display: flex;
@@ -23,7 +27,7 @@
     .namediv a {
         color: black;
         font-size: 18px;
-        padding: 18px;
+        padding: 54px;
         font-weight: 500;
         text-decoration: none;
     }

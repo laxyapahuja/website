@@ -44,7 +44,7 @@
                     .song-name {
                         color: white;
                         font-weight: 600;
-                        padding-top: 2vh;
+                        padding-top: 1.5vh;
                         text-align: center;
                     }
                     .artist-name {
@@ -60,6 +60,7 @@
                     }
                 </style>`
                 }
+                document.getElementsByClassName('spotify-center')[0].style.flexDirection = 'column'
                 document.getElementsByClassName('spotify')[0].style.background = `rgba(255, 255, 255, 0.21)`
                 document.getElementsByClassName('spotify')[0].style.backdropFilter = `blur(120px)`
                 document.getElementsByTagName('body')[0].style.background = `radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.08) 100%), rgba(0, 0, 0, 0.25)`
@@ -68,6 +69,7 @@
                 document.getElementsByClassName('name')[0].style.color = 'white'
                 document.getElementsByClassName('tagline')[0].style.color = 'white'
                 document.getElementsByClassName('about')[0].style.color = 'white'
+                document.getElementsByTagName('body')[0].style.backgroundSize = 'contain'
                 document.getElementsByClassName('spotify-head-text')[0].style.color = 'white'
                 document.getElementsByClassName('ri-spotify-fill')[0].style.color = 'white'
                 document.getElementsByClassName('spotify-footer')[0].innerHTML = ''
@@ -83,14 +85,18 @@
                 const nextTrack = () => {
                     if (trackIndex < 9 && trackIndex >= 0) {
                         trackIndex += 1
-                        console.log(trackIndex)
+                        trackChange(trackIndex)
+                    } else {
+                        trackIndex = 0
                         trackChange(trackIndex)
                     }
                 }
                 const previousTrack = () => {
                     if (trackIndex <= 9 && trackIndex > 0) {
                         trackIndex -= 1
-                        console.log(trackIndex)
+                        trackChange(trackIndex)
+                    } else {
+                        trackIndex = 9
                         trackChange(trackIndex)
                     }
                 }
@@ -114,9 +120,9 @@
         <i class="ri-spotify-fill"></i>
     </div>
     <div class="spotify-center">
-        <div class="spotify-center-div">
+        <div class="spotify-center-div" id="start-button">
             <h1>want to check out my top 10 spotify tracks?</h1>
-            <svg id="start-button" width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M31.3346 10.0314L23.3958 2.09272L25.4886 0L37 11.5114L25.4886 23.0229L23.3958 20.9302L31.3346 12.9914H0V10.0314H31.3346Z" fill="#2A3B46"/>
             </svg>
         </div>                          
@@ -127,6 +133,9 @@
 </div>
 
 <style>
+    #start-button {
+        cursor: pointer;
+    }
     .spotify {
         display: flex;
         flex-direction: column;
@@ -145,7 +154,7 @@
         flex-direction: row;
         margin: 0 18px 0 18px;
         align-items: center;
-        height: 8vh;
+        height: 6vh;
     }
     .spotify-footer {
         display: flex;
@@ -174,10 +183,10 @@
     }
     .spotify-center {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        padding: 2vh 54px 2vh 54px;
-        height: 18vh;
+        padding: 1vh 54px 1vh 54px;
+        height: 20vh;
     }
     .spotify-center svg {
         cursor: pointer;

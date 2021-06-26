@@ -6,11 +6,12 @@
         const cardText = document.querySelector('.cards > h3')
         const cardLink = document.getElementsByClassName('cardlink')
         let i = 1;
+        let t;
         let cardColorsTransparent = [['rgba(255, 122, 122, 0.4)', '#FFFFFF'], ['rgba(193, 245, 154, 0.4)', '#304A1C'], ['rgba(213, 161, 247, 0.4)', '#743E97'], ['rgba(249, 128, 162, 0.4)', '#FFFFFF']]
         let cardColors = [['rgba(255, 122, 122)', '#FFFFFF'], ['rgba(193, 245, 154)', '#304A1C'], ['rgba(213, 161, 247)', '#743E97'], ['rgba(249, 128, 162)', '#FFFFFF']]
         cardText.innerHTML = cards[0]
         function cycle() {
-            setTimeout(() => {
+            t = setTimeout(() => {
                 console.log(i)
                 cardText.innerHTML = cards[i]
                 card.style.backgroundColor = cardColors[i][0]
@@ -25,9 +26,15 @@
                 } else {
                     cycle();
                 }
-            }, 3000)
+            }, 4000)
         }
         cycle();
+        card.addEventListener('mouseover', () => {
+            clearTimeout(t)
+        })
+        card.addEventListener('mouseout', () => {
+            cycle();
+        })
         document.getElementById('start-button').addEventListener('click', () => {
             cardColors = cardColorsTransparent
         })
@@ -38,7 +45,6 @@
     <style>
     .cardlink {
         text-decoration: none;
-        font-style: italic;
         color: white;
         font-weight: 600;
     }
@@ -54,6 +60,7 @@
         border-radius: 16px;
         margin-left: 0.5vw;
         background-color: #FF7A7A;
+        transition: background-color 1s linear;
     }
     .cards h3 {
         font-size: 24px;

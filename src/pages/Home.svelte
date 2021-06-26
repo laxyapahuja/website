@@ -12,11 +12,11 @@
             <div class="intro-right">
                 <h1 class="name">Laxya Pahuja</h1>
                 <h2 class="tagline">developer, filmmaker & motion designer</h2>
-                <p class="about">i'm an 18 year-old developer & motion designer from india.
-                    i love to develop solutions to problems prevalent around me. i'm primarily interested in mobile & web development, although I've also built text editor extensions for clients. although i use ts, js and python for my projects, i'm trying my best to expand my skillset to reach new horizons.
+                <p class="about">i'm an <b>18 year-old developer & motion designer</b> from <b>india</b>.
+                    i love to develop solutions to problems prevalent around me. i'm primarily interested in <b>mobile & web development</b>, although I've also built text editor extensions for clients. although i use <b>ts, js and python</b> for my projects, i'm trying my best to expand my skillset to reach new horizons.
                     <br/>
                     <br/>
-                    i'm a huge film making enthusiast and have also worked on some films of my own before. initially starting off as an editor and a motion designer, i've now started directing and writing my own films.</p>    
+                    i'm a huge <b>film making enthusiast</b> and have also worked on some films of my own before. initially starting off as an editor and a <i>motion designer</i>, i've now started <i>directing</i> and <i>writing</i> my own films.</p>    
             </div>
         </div>
         <div class="activity">
@@ -40,9 +40,12 @@
 
 <style>
     .home {
-        padding: 4vh 0 4vh 0;
+        padding: 4vh 0 0 0;
         overflow-y:auto;
         width: 726px;
+    }
+    b {
+        font-weight: 500
     }
     .intro {
         display: flex;
@@ -84,7 +87,7 @@
         flex-direction: row;
         margin-bottom: 18px;
     }
-    i {
+    .socials i {
         font-size: 24px;
         padding: 0 18px 0 18px;
         color: #B3B3B3;
