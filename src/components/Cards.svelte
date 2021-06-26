@@ -12,7 +12,6 @@
         cardText.innerHTML = cards[0]
         function cycle() {
             t = setTimeout(() => {
-                console.log(i)
                 cardText.innerHTML = cards[i]
                 card.style.backgroundColor = cardColors[i][0]
                 cardText.style.color = cardColors[i][1]
@@ -20,7 +19,7 @@
                     element.style.color = cardColors[i][1]
                 })
                 i++;
-                if (i == 4) {
+                if (i >= 4) {
                     i = 0
                     cycle();
                 } else {
@@ -33,7 +32,7 @@
             clearTimeout(t)
         })
         card.addEventListener('mouseout', () => {
-            cycle();
+            cycle()
         })
         document.getElementById('start-button').addEventListener('click', () => {
             cardColors = cardColorsTransparent
@@ -60,7 +59,7 @@
         border-radius: 16px;
         margin-left: 0.5vw;
         background-color: #FF7A7A;
-        transition: background-color 1s linear;
+        transition: all 1s;
     }
     .cards h3 {
         font-size: 24px;

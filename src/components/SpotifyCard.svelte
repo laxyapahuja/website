@@ -63,7 +63,7 @@
                 document.getElementsByClassName('spotify-center')[0].style.flexDirection = 'column'
                 document.getElementsByClassName('spotify')[0].style.background = `rgba(255, 255, 255, 0.21)`
                 document.getElementsByClassName('spotify')[0].style.backdropFilter = `blur(120px)`
-                document.getElementsByTagName('body')[0].style.background = `radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.08) 100%), rgba(0, 0, 0, 0.25)`
+                document.getElementsByTagName('body')[0].style.backgroundColor = `radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.08) 100%), rgba(0, 0, 0, 0.25)`
                 document.getElementsByTagName('body')[0].style.backdropFilter = `blur(140px)`
                 document.getElementsByTagName('body')[0].style.backgroundImage = `url(${spotifyResponse[0].album.images[0].url})`
                 document.getElementsByClassName('name')[0].style.color = 'white'
@@ -144,6 +144,7 @@
         height: 32vh;
         border-radius: 16px;
         margin-right: 22px;
+        transition: background 1s;
         background: linear-gradient(180deg, rgba(108, 183, 232, 0.43) -9.26%, #C1F59A 107.79%);
     }
     .spotify:hover {

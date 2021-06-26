@@ -1,3 +1,7 @@
+<script>
+    import {Link} from 'svelte-navigator';
+</script>
+
 <style>
     nav {
         height: 80px;
@@ -54,10 +58,10 @@
             <a href="/">laxya.co</a>
         </div>
         <div class="navlinks">
-            <a class="navtext" href="/projects">Projects</a>
-            <a class="navtext" href="/resume">Resume</a>
-            <a class="navtext" href="/notes">Notes</a>
-            <a class="navtext" href="/contact">Contact</a>
+            <Link to="/projects" style="text-decoration: none;"><span class="navtext">Projects</span></Link>
+            <Link to="/notes" style="text-decoration: none;"><span class="navtext" href="/notes">Notes</span></Link>
+            <Link to="/contact" style="text-decoration: none;"><span class="navtext" href="/contact">Contact</span></Link>
+            <Link to="/resume" style="text-decoration: none;"><span class="navtext" href="/resume">Resume</span></Link>
         </div>
     </div>
 </nav>
