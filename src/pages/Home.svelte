@@ -13,7 +13,6 @@
                 <h1 class="name">Laxya Pahuja</h1>
                 <h2 class="tagline">developer, filmmaker & motion designer</h2>
                 <p class="about">i'm an 18 year-old developer & motion designer from india.
-                    <br/>
                     i love to develop solutions to problems prevalent around me. i'm primarily interested in mobile & web development, although I've also built text editor extensions for clients. although i use ts, js and python for my projects, i'm trying my best to expand my skillset to reach new horizons.
                     <br/>
                     <br/>
@@ -41,8 +40,9 @@
 
 <style>
     .home {
-        padding: 2vw 6vw 2vw 6vw;
+        padding: 4vh 0 4vh 0;
         overflow-y:auto;
+        width: 726px;
     }
     .intro {
         display: flex;
@@ -60,44 +60,65 @@
     }
 	.pfp {
 		border-radius: 100px;
-		width: 10vw;
-		margin-right: 0.5vw;
+		width: 180px;
+		margin-right: 9px;
 	}
     .name {
-        font-size: 3vw;
+        font-size: 64px;
         font-weight: 800;
     }
     .tagline {
-        font-size: 1.2vw;
+        font-size: 24px;
         font-weight: 400;
-        padding: 0.2vw 0 0.5vw 0;
+        padding: 2px 0 15px 0;
         color: black;
     }
     .about {
-        font-size: 0.9vw;
+        font-size: 18px;
         font-weight: 400;
         color: black;
-        margin-bottom: 3vw;
+        margin-bottom: 54px;
     }
     .activity {
         display: flex;
         flex-direction: row;
-        margin-bottom: 1vw;
+        margin-bottom: 18px;
     }
     i {
-        font-size: 1.2vw;
-        padding: 0 1vw 0 1vw;
+        font-size: 24px;
+        padding: 0 18px 0 18px;
         color: #B3B3B3;
     }
     .footerlink {
         text-decoration: none;
     }
     .socials {
-        height: 4vw;
+        height: 8vh;
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 2vw 0 2vw 0;
+        padding: 4vh 0 2vh 0;
         z-index: 2;
+    }
+    .ri-mail-fill:hover {
+        color: #199EB7;
+    }
+    .ri-github-fill:hover {
+        color: #211F1F;
+    }
+    .ri-linkedin-fill:hover {
+        color:#0a66c2;
+    }
+    .ri-twitter-fill:hover {
+        color: #1DA1F2;
+    }
+    .ri-instagram-fill:hover {
+        color: #D92F7F;
+    }
+    .ri-youtube-fill:hover {
+        color: #FF0000;
+    }
+    .ri-behance-fill:hover {
+        color: #1769FF;
     }
 </style>

@@ -43,21 +43,21 @@
         font-weight: 600;
     }
     </style>
-    <h3></h3>
+    <h3>Fetching data from my <a class="cardlink" href="https://github.com/laxyapahuja">GitHub</a>, <a class="cardlink" href="https://www.goodreads.com/user/show/15850881-laxya-pahuja">Goodreads</a> & <a class="cardlink" href="https://letterboxd.com/laxyapahuja">Letterboxd</a> accounts dynamically. Please wait...</h3>
 </div>
 
 <style>
     .cards {
         width: 100%;
-        height: 16.25vw;
+        height: 32vh;
         flex: 1;
         border-radius: 16px;
         margin-left: 0.5vw;
         background-color: #FF7A7A;
     }
     .cards h3 {
-        font-size: 1.22vw;
-        padding: 1.2vw;
+        font-size: 24px;
+        padding: 24px;
         color: white;
         font-weight: 400;
     }

@@ -26,7 +26,7 @@
                 <h3 class="artist-name">${spotifyResponse[index].artists[0].name}</h3> 
                 <style>
                     .album-art {
-                    width: 10vh;
+                    width: 130px;
                     border-radius: 1vh;
                     }
                     .player-div {
@@ -132,9 +132,9 @@
         flex-direction: column;
         flex: 1.3;
         width: 100%;
-        height: 16.25vw;
+        height: 32vh;
         border-radius: 16px;
-        margin-right: 0.5vw;
+        margin-right: 22px;
         background: linear-gradient(180deg, rgba(108, 183, 232, 0.43) -9.26%, #C1F59A 107.79%);
     }
     .spotify:hover {
@@ -143,20 +143,20 @@
     .spotify-head {
         display: flex;
         flex-direction: row;
-        margin: 0 1vw 0 1vw;
+        margin: 0 18px 0 18px;
         align-items: center;
-        height: 4vw;
+        height: 8vh;
     }
     .spotify-footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        height: 3vw;
+        height: 6vh;
         margin: auto;
     }
     .spotify-footer-text {
         color: #45535C;
-        font-size: 0.7vw;
+        font-size: 12px;
         font-weight: 400;
         font-style: italic;
     }
@@ -169,15 +169,15 @@
     .spotify-head i {
         margin-left: auto;
         color: #45535C;
-        font-size: 2vw;
+        font-size: 36px;
         padding: 0;
     }
     .spotify-center {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 1vw 3vw 1vw 3vw;
-        height: 10.25vw;
+        padding: 2vh 54px 2vh 54px;
+        height: 18vh;
     }
     .spotify-center svg {
         cursor: pointer;
@@ -189,15 +189,15 @@
     }
     .spotify-center h1 {
         color: #2A3B46;
-        font-size: 1.5vw;
+        font-size: 28px;
         font-weight: 600;
         text-align: center;
-        margin-bottom: 1vw;
+        margin-bottom: 18px;
     }
     .spotify-head-text {
         color: #45535C;
-        font-size: 0.9vw;
+        font-size: 14px;
         font-weight: 400;
-        margin-left: 1.8vw;
+        margin-left: 32px;
     }
 </style>

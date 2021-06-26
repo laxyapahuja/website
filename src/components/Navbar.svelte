@@ -1,16 +1,17 @@
 <style>
     nav {
-        height: 4vw;
+        height: 80px;
         display: flex;
         align-items: center;
         flex-direction: column;
         outline: 1px solid #D9D9D9;
         background-color: white;
+        width: 100%;
     }
     .navtext {
         color: #666666;
-        font-size: 1vw;
-        padding: 1vw;
+        font-size: 18px;
+        padding: 18px;
         text-decoration: none;
         font-weight: 400;
     }
@@ -21,24 +22,24 @@
     }
     .namediv a {
         color: black;
-        font-size: 1vw;
-        padding: 1vw;
+        font-size: 18px;
+        padding: 18px;
         font-weight: 500;
         text-decoration: none;
     }
     .namediv {
-        height: 4vw;
+        height: 80px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding-right: 1vw;
+        padding-right: 18px;
         border-right: 1px solid #D9D9D9;
     }
     .navlinks {
         display: flex;
         flex-direction: row;
-        height: 4vw;
-        padding-left: 1vw;
+        height: 80px;
+        padding-left: 18px;
         align-items: center;
     }
 </style>
