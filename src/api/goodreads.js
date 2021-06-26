@@ -14,19 +14,21 @@ const getFavoritesAndCurrentBooks = async() => {
     gdrdsFavHTML.innerHTML = resFav
     let gdrdsHTML = document.createElement('html')
     gdrdsHTML.innerHTML = res
-    let favList = gdrdsFavHTML.querySelectorAll('.bookList > li')
-    let readingList = gdrdsHTML.querySelectorAll('.bookList > li')
+    let favorite = gdrdsFavHTML.querySelectorAll('meta')[0]
+    console.log(favorite)
+    let favList = favorite.getAttribute('content').split(': ')[1].split(' and ')
+    let reading = gdrdsHTML.querySelectorAll('meta')[0]
     for (let i = 0; i < favList.length; i++) {
         let favObject = {
             title: '',
             link: ''
         }
-        favObject.link = `https://goodreads.com${favList[i].querySelector('a').getAttribute('href')}`
-        favObject.title = favList[i].querySelector('.bookTitle > a').innerText + ' by ' + favList[i].querySelector('.bookAuthor > div').innerText
+        favObject.link = ``
+        favObject.title = favList[i]
         returnObject.favorites.push(favObject)
     }
-    returnObject.recent.link = `https://goodreads.com${readingList[0].querySelector('a').getAttribute('href')}`
-    returnObject.recent.title = readingList[0].querySelector('.bookTitle > a').innerText + ' by ' + gdrdsHTML.querySelector('.bookAuthor > div').innerText
+    returnObject.recent.link = ``
+    returnObject.recent.title = reading.getAttribute('content').split('reading ')[1].split(',')[0]
     console.log(returnObject)
     return returnObject
 }

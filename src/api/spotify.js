@@ -1,4 +1,4 @@
-const getTopArtists = async() => {
+const getTopTracks = async() => {
     var details = {
         'grant_type': 'refresh_token',
         'refresh_token': __myapp.env.SPOTIFY_API_REFRESH_TOKEN,
@@ -23,7 +23,7 @@ const getTopArtists = async() => {
     let res = await response.json()
     let accessToken = res.access_token
 
-    let responseTracks = await fetch('https://api.spotify.com/v1/me/top/tracks?time_range=short_term', {
+    let responseTracks = await fetch('https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${accessToken}`
@@ -34,4 +34,4 @@ const getTopArtists = async() => {
     return resTracks.items
 }
 
-export default getTopArtists;
+export default getTopTracks;

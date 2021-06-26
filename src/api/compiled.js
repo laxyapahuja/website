@@ -1,5 +1,6 @@
 import getFavoritesAndRecentMovie from '../api/letterboxd';
 import getFavoritesAndCurrentBooks from '../api/goodreads';
+import getStarsAndRepositories from '../api/github';
 
 const cardsArray = async() => {
     let returnArray = []
@@ -20,7 +21,12 @@ const cardsArray = async() => {
     movieCardText += `<a class="cardlink" target="_blank" href="${movieList.recent.link}"><i>${movieList.recent.title}</i></a> and rated it <b>${String(movieList.recent.rating)}/5 stars</b>. `
     returnArray.push(movieCardText)
     let bookCardText = 'I’ve also started reading. My favorite books are '
-    let bookList = await getFavoritesAndCurrentBooks();
+    let bookList = []
+    if (window.innerWidth < 1000) {
+        bookList = await getFavoritesAndCurrentBooksMobile();
+    } else {
+        bookList = await getFavoritesAndCurrentBooks();
+    }
     for (let i = 0; i < bookList.favorites.length; i++) {
         if (i == (bookList.favorites.length - 1)) {
             bookCardText += ` and <a class="cardlink" target="_blank" href="${bookList.favorites[i].link}"><i>${bookList.favorites[i].title}</i>.</a>`
@@ -32,6 +38,9 @@ const cardsArray = async() => {
     let bookCard2Text = 'I’m currently reading '
     bookCard2Text += `<a class="cardlink" target="_blank" href="${bookList.recent.link}"><i>${bookList.recent.title}</i></a>.`
     returnArray.push(bookCard2Text)
+    let githubObject = await getStarsAndRepositories()
+    let githubText = `I’m very active on GitHub! I have over ${githubObject.repos} repositories public and ${githubObject.stars} stars.`
+    returnArray.push(githubText)
     return returnArray
 }
 
