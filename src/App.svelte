@@ -4,6 +4,7 @@
 	import Navbar from './components/Navbar.svelte';
 	import Footer from './components/Footer.svelte';
 	import Projects from './pages/Projects.svelte';
+	import Notes from './pages/Notes.svelte';
 </script>
 
 <Router>
@@ -16,6 +17,9 @@
 		</Route>
 		<Route path="projects">
 			<Projects/>
+		</Route>
+		<Route path="notes">
+			<Notes/>
 		</Route>
 	  </main>
 	  <Footer />

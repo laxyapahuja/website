@@ -1,44 +1,63 @@
 <script>
-    import Project from '../components/Project.svelte';
-    import Masonry from 'svelte-masonry/Masonry.svelte';
     import projects from '../../data/projects.json';
+    import ProjectLoop from '../components/ProjectLoop.svelte';
     import { onMount } from 'svelte';
 
-    let projectsFinal = projects.code, refreshLayout
+    let code = true;
+    let design = false;
+    let films = false;
+    let opensource = false;
+    let music = false;
 
     onMount(() => {
         document.getElementById('code-button').addEventListener('click', () => {
         document.querySelector('.active').classList.remove('active')
         document.getElementById('code-button').classList.add('active')
-        projectsFinal = projects.code
+        films = false;
+        opensource = false;
+        music = false;
+        code = true
+        design = false
     })
 
     document.getElementById('design-button').addEventListener('click', ()=> {
-        console.log('click')
         document.querySelector('.active').classList.remove('active')
         document.getElementById('design-button').classList.add('active')
-        projectsFinal = projects.design
+        films = false;
+        opensource = false;
+        music = false;
+        code = false
+        design = true
     })
 
     document.getElementById('films-button').addEventListener('click', ()=> {
-        console.log('click')
         document.querySelector('.active').classList.remove('active')
         document.getElementById('films-button').classList.add('active')
-        projectsFinal = projects.films
+        films = true;
+        opensource = false;
+        music = false;
+        code = false
+        design = false
     })
 
     document.getElementById('opensource-button').addEventListener('click', ()=> {
-        console.log('click')
         document.querySelector('.active').classList.remove('active')
         document.getElementById('opensource-button').classList.add('active')
-        projectsFinal = projects.opensource
+        films = false;
+        opensource = true;
+        music = false;
+        code = false
+        design = false
     })
 
     document.getElementById('music-button').addEventListener('click', ()=> {
-        console.log('click')
         document.querySelector('.active').classList.remove('active')
         document.getElementById('music-button').classList.add('active')
-        projectsFinal = projects.music
+        films = false;
+        opensource = false;
+        music = true;
+        code = false
+        design = false
     })
     })
 
@@ -57,11 +76,21 @@
     </div>
 </nav>
 <div class="projects">
-    <Masonry gridGap="26px" bind:refreshLayout={refreshLayout}>
-        {#each projectsFinal as project}
-            <Project project={project} refreshLayout={refreshLayout}/>
-        {/each}
-    </Masonry>
+    {#if code}
+        <ProjectLoop projects={projects.code}/>
+    {/if}
+    {#if design}
+        <ProjectLoop projects={projects.design}/>
+    {/if}
+    {#if films}
+        <ProjectLoop projects={projects.films}/>
+    {/if}
+    {#if opensource}
+        <ProjectLoop projects={projects.opensource}/>
+    {/if}
+    {#if music}
+        <ProjectLoop projects={projects.music}/>
+    {/if}
 </div>
 
 <style>

@@ -57,7 +57,7 @@
         },
         {
             "title": "Robotronics 2019 | Opening Video",
-            "description": "A promotional video made for Robotronics 2019 - a tech event hosted by <a href=\"https://techsyndicate.co\">Tech Syndicate</a>.",
+            "description": "A promotional video made for Robotronics 2019 - a tech event hosted by <a target=\"_blank\" href=\"https://techsyndicate.co\">Tech Syndicate</a>.",
             "thumbnail": "/images/projects/robotronics19.gif",
             "media": "https://www.youtube.com/watch?v=MQRBqG06E4E",
             "project": null,
@@ -65,7 +65,7 @@
         },
         {
             "title": "Mifos Introductory Video",
-            "description": "An introductory video made for <a href=\"https://mifos.org\"> The Mifos Initiative. </a>",
+            "description": "An introductory video made for <a target=\"_blank\" href=\"https://mifos.org\"> The Mifos Initiative. </a>",
             "thumbnail": "/images/projects/mifos.gif",
             "media": "https://www.youtube.com/watch?v=pE28NrY66Zc",
             "project": null,
@@ -97,7 +97,7 @@
         },
         {
             "title": "Robotronics 2018 | Opening Video",
-            "description": "A promotional video made for Robotronics 2018 - a tech event hosted by <a href=\"https://techsyndicate.co\">Tech Syndicate</a>.",
+            "description": "A promotional video made for Robotronics 2018 - a tech event hosted by <a target=\"_blank\" href=\"https://techsyndicate.co\">Tech Syndicate</a>.",
             "thumbnail": "/images/projects/robotronics18.gif",
             "media": "https://www.youtube.com/watch?v=t9ne6kgIcJg",
             "project": null,
@@ -138,7 +138,7 @@
     ],
     "films": [{
             "title": "fwd:",
-            "description": "A short horror film based on a story by <a href=\"https://ishaandas.com\"> Ishaan Das. </a>",
+            "description": "A short horror film based on a story by <a target=\"_blank\" href=\"https://ishaandas.com\"> Ishaan Das. </a>",
             "thumbnail": "/images/projects/fwd.gif",
             "media": "https://www.youtube.com/watch?v=Tj4ltzjJG0o",
             "project": null,
@@ -202,7 +202,7 @@
         },
         {
             "title": "Robotronics 2018 | Closing Video",
-            "description": "Closing Video made for Robotronics 2018 - a tech event hosted by <a href=\"https://techsyndicate.co\">Tech Syndicate</a>.",
+            "description": "Closing Video made for Robotronics 2018 - a tech event hosted by <a target=\"_blank\" href=\"https://techsyndicate.co\">Tech Syndicate</a>.",
             "thumbnail": "/images/projects/robo18.gif",
             "media": "https://www.youtube.com/watch?v=P8OnGugHORY",
             "project": null,
@@ -244,7 +244,7 @@
     ],
     "code": [{
             "title": "VSCode DMs",
-            "description": "Direct Messages for Visual Studio Code. Secured 2nd prize at <a href=\"https://exunclan.com/\">Exun 2020</a> Hackathon hosted by DPS RK Puram.",
+            "description": "Direct Messages for Visual Studio Code. Secured 2nd prize at <a target=\"_blank\" href=\"https://exunclan.com/\">Exun 2020</a> Hackathon hosted by DPS RK Puram.",
             "thumbnail": "https://socialify.git.ci/techsyndicate/vscode-dms/image?description=1&descriptionEditable=Direct%20Messages%20for%20VSCode&forks=1&issues=1&language=1&owner=1&stargazers=1&theme=Dark",
             "media": "https://bhyi.tk/vscdms",
             "project": "https://github.com/techsyndicate/vscode-dms",
@@ -260,7 +260,7 @@
         },
         {
             "title": "COVICoin",
-            "description": "Gamified platform which shows tweets in need to users who then help them and earn redeemable credits accordingly. Secured 2nd prize at <a href=\"https://devfolio.co/submissions/covicoin-74c9\">FrostHack 2021</a> hosted by IIT Mandi.",
+            "description": "Gamified platform which shows tweets in need to users who then help them and earn redeemable credits accordingly. Secured 2nd prize at <a target=\"_blank\" href=\"https://devfolio.co/submissions/covicoin-74c9\">FrostHack 2021</a> hosted by IIT Mandi.",
             "thumbnail": "https://socialify.git.ci/cotnw/covicoin/image?description=1&forks=1&issues=1&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fcotnw%2Fcovicoin%2Fmain%2Fpublic%2Fassets%2Ffavicon.svg&owner=1&pulls=1&stargazers=1&theme=Dark",
             "media": "https://covicoin.herokuapp.com",
             "project": "https://github.com/cotnw/covicoin",
@@ -308,7 +308,7 @@
         },
         {
             "title": "Codimg",
-            "description": "A re-modelled approach to code plagiarism detection. Secured 1st Place at <a href=\"https://code-warriors.org/\">Code Wars 2020</a> Hackathon hosted by DPS Vasant Kunj.",
+            "description": "A re-modelled approach to code plagiarism detection. Secured 1st Place at <a target=\"_blank\" href=\"https://code-warriors.org/\">Code Wars 2020</a> Hackathon hosted by DPS Vasant Kunj.",
             "thumbnail": "https://socialify.git.ci/techsyndicate/codimg/image?description=1&language=1&owner=1&stargazers=1&theme=Dark",
             "media": "http://codimg.herokuapp.com",
             "project": "https://github.com/techsyndicate/codimg",
@@ -316,7 +316,7 @@
         },
         {
             "title": "Lancerate",
-            "description": "An app which brings you crowdsourced rates for freelancers. Secured 2nd Prize at <a href=\"https://minet.co\">MINET 2020</a> Designathon hosted by The Mother's International.",
+            "description": "An app which brings you crowdsourced rates for freelancers. Secured 2nd Prize at <a target=\"_blank\" href=\"https://minet.co\">MINET 2020</a> Designathon hosted by The Mother's International.",
             "thumbnail": "https://socialify.git.ci/lancerate/lancerate/image?description=1&descriptionEditable=An%20app%20which%20brings%20you%20crowdsourced%20rates%20for%20freelancers.&language=1&owner=1&pattern=Plus&stargazers=1&theme=Dark",
             "media": "https://lancerate.herokuapp.com",
             "project": "https://github.com/lancerate/lancerate-web",
@@ -332,7 +332,7 @@
         },
         {
             "title": "faid",
-            "description": "An app to fade your injuries away with first-aid assistance. Secured 2nd Prize at <a href=\"http://dynamix.co.in/\">Dynamix 2019</a> Hackathon hosted by Ramjas School, RK Puram.",
+            "description": "An app to fade your injuries away with first-aid assistance. Secured 2nd Prize at <a target=\"_blank\" href=\"http://dynamix.co.in/\">Dynamix 2019</a> Hackathon hosted by Ramjas School, RK Puram.",
             "thumbnail": "https://socialify.git.ci/laxyapahuja/faid/image?description=1&issues=1&language=1&owner=1&stargazers=1&theme=Dark",
             "media": null,
             "project": "https://github.com/laxyapahuja/faid",
@@ -340,7 +340,7 @@
         },
         {
             "title": "Ballon",
-            "description": "A webapp made for hosting elections online. Secured 1st Prize at <a href=\"https://coreisus.co\">CORE 2020</a> hackathon hosted by DPS Dwarka.",
+            "description": "A webapp made for hosting elections online. Secured 1st Prize at <a target=\"_blank\" href=\"https://coreisus.co\">CORE 2020</a> hackathon hosted by DPS Dwarka.",
             "thumbnail": "https://socialify.git.ci/techsyndicate/ballon/image?description=1&language=1&owner=1&stargazers=1&theme=Dark",
             "media": "https://bhyi.tk/ballonwebsite",
             "project": "https://github.com/techsyndicate/ballon",
