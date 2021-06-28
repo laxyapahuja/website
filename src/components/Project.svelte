@@ -1,12 +1,12 @@
 <script>
-    export let project;
+    export let project, refreshLayout;
 </script>
 
 <div class="project">
-    <img alt= "project" src="https://socialify.git.ci/techsyndicate/vscode-dms/image?description=1&descriptionEditable=Direct%20Messages%20for%20VSCode&forks=1&issues=1&language=1&owner=1&stargazers=1&theme=Dark">
+    <img on:load={refreshLayout} alt= "project" src="{project.thumbnail}">
     <div>
-        <h1>VSCode DMs <span class="year">(2020)</span></h1>
-        <h2>Direct Messages for Visual Studio Code. Secured 2nd prize at Exun 2020 Hackathon hosted by DPS RK Puram.</h2>
+        <h1>{project.title} <span class="year">({project.year})</span></h1>
+        <h2>{@html project.description}</h2>
     </div>
 </div>
 

@@ -1,29 +1,67 @@
 <script>
     import Project from '../components/Project.svelte';
+    import Masonry from 'svelte-masonry/Masonry.svelte';
+    import projects from '../../data/projects.json';
+    import { onMount } from 'svelte';
 
-    window.onload = () => {
-        let container = document.querySelector('.projects');
-        var msnry = new Masonry(container, {
-                itemSelector: '.project', columnWidth: '700px'
-    });
-    }
+    let projectsFinal = projects.code, refreshLayout
+
+    onMount(() => {
+        document.getElementById('code-button').addEventListener('click', () => {
+        document.querySelector('.active').classList.remove('active')
+        document.getElementById('code-button').classList.add('active')
+        projectsFinal = projects.code
+    })
+
+    document.getElementById('design-button').addEventListener('click', ()=> {
+        console.log('click')
+        document.querySelector('.active').classList.remove('active')
+        document.getElementById('design-button').classList.add('active')
+        projectsFinal = projects.design
+    })
+
+    document.getElementById('films-button').addEventListener('click', ()=> {
+        console.log('click')
+        document.querySelector('.active').classList.remove('active')
+        document.getElementById('films-button').classList.add('active')
+        projectsFinal = projects.films
+    })
+
+    document.getElementById('opensource-button').addEventListener('click', ()=> {
+        console.log('click')
+        document.querySelector('.active').classList.remove('active')
+        document.getElementById('opensource-button').classList.add('active')
+        projectsFinal = projects.opensource
+    })
+
+    document.getElementById('music-button').addEventListener('click', ()=> {
+        console.log('click')
+        document.querySelector('.active').classList.remove('active')
+        document.getElementById('music-button').classList.add('active')
+        projectsFinal = projects.music
+    })
+    })
+
 </script>
 
 <nav class="projects-header">
     <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
         <h1>Projects</h1>
         <div>
-            <button class="active">Code</button>
-            <button>Design</button>
-            <button>Films</button>
-            <button>Open Source</button>
-            <button>Music</button>
+            <button id="code-button" class="active">Code</button>
+            <button id="design-button">Design</button>
+            <button id="films-button">Films</button>
+            <button id="opensource-button">Open Source</button>
+            <button id="music-button">Music</button>
         </div>
     </div>
 </nav>
 <div class="projects">
-    <Project />
-    <Project />
+    <Masonry gridGap="26px" bind:refreshLayout={refreshLayout}>
+        {#each projectsFinal as project}
+            <Project project={project} refreshLayout={refreshLayout}/>
+        {/each}
+    </Masonry>
 </div>
 
 <style>
@@ -62,7 +100,7 @@
 }
 .projects {
     overflow-y:auto;
-    width: 726px;
-    padding: 40px 10px;
+    width: 778px;
+    padding: 40px 0;
 }
 </style>
