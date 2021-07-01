@@ -60,6 +60,7 @@
         margin-left: 0.5vw;
         background-color: #FF7A7A;
         transition: all 1s;
+        overflow-y:auto;
     }
     .cards h3 {
         font-size: 24px;

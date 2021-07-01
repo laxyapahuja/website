@@ -5,6 +5,7 @@
 	import Footer from './components/Footer.svelte';
 	import Projects from './pages/Projects.svelte';
 	import Notes from './pages/Notes.svelte';
+	import Modal from 'svelte-simple-modal';
 </script>
 
 <Router>
@@ -19,7 +20,9 @@
 			<Projects/>
 		</Route>
 		<Route path="notes">
-			<Notes/>
+			<Modal closeButton={false} styleContent={{display: 'flex', 'flex-direction': 'column', 'align-items': 'center', background: 'rgba(0,0,0,0)'}} styleWindow={{background: 'rgba(0,0,0,0)'}}>
+				<Notes/>
+			</Modal>
 		</Route>
 	  </main>
 	  <Footer />
