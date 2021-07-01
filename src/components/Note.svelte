@@ -1,12 +1,12 @@
 <script>
     import {onMount} from 'svelte';
-    import marked from 'marked';
+    import {Link} from 'svelte-navigator';
 
-    export let combo, note;
+    export let note;
     onMount(() => {
-        document.querySelector(`#${note.id}`).style.backgroundColor = combo[0]
-        document.querySelector(`#${note.id}`).style.color = combo[1]
-        document.querySelector(`#${note.id} > div > h2`).style.color = combo[1]
+        document.querySelector(`#${note.id}`).style.backgroundColor = note.bgColor
+        document.querySelector(`#${note.id}`).style.color = note.color
+        document.querySelector(`#${note.id} > div > h2`).style.color = note.color
     })
 </script>
 
@@ -16,11 +16,13 @@
     </div>
     <div class="note-body">
         <h1>{note.title}</h1>
-        <h2>{note.description}</h2>
+        <h2>{@html note.description}</h2>
     </div>
 </div>
 
+
 <style>
+
 .note {
     width: 350px;
     max-height: 400px;

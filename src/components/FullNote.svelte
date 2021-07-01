@@ -2,15 +2,15 @@
     import {onMount} from 'svelte';
     import marked from 'marked';
 
-    export let combo, note;
+    export let note;
     onMount(() => {
-        document.querySelector(`#${note.id}`).style.backgroundColor = combo[0]
-        document.querySelector(`#${note.id}`).style.color = combo[1]
-        document.querySelector(`#${note.id} > div > h2`).style.color = combo[1]
+        document.querySelector(`#${note.id}-full`).style.backgroundColor = note.bgColor
+        document.querySelector(`#${note.id}-full`).style.color = note.color
+        document.querySelector(`#${note.id}-full > div > h2`).style.color = note.color
     })
 </script>
 
-<div class="note-full" id={note.id}>
+<div class="note-full" id="{note.id}-full">
     <div class="note-header" id="{note.id}-header">
         27/06/20 • {note.tag}
     </div>

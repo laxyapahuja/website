@@ -1,28 +1,47 @@
 <script>
+    export let id;
     import Note from '../components/Note.svelte';
     import notes from '../../data/notes.json';
     import Masonry from 'svelte-masonry/Masonry.svelte';
     import { getContext, onMount } from 'svelte';
     import FullNote from '../components/FullNote.svelte';
 
-    const { open } = getContext('simple-modal');
-
-    let cardColors = [['rgba(255, 122, 122)', '#FFFFFF'], ['rgba(193, 245, 154)', '#304A1C'], ['rgba(213, 161, 247)', '#743E97'], ['#293A4A', '#9BE294'], ['#000000', '#FFFFFF']]
+    const { open, closed } = getContext('simple-modal');
 
     document.querySelector('body').style.background = '#FFFFFF'
     
     onMount(() => {
-        document.querySelectorAll('.note').forEach((note, index) => {
-            note.addEventListener('click', (e) => {
-                notes.forEach(note => {
-                    let noteDiv = document.querySelectorAll('.note')[index]
-                    let combo = [noteDiv.style.backgroundColor, noteDiv.style.color]
-                    if(note.id == noteDiv.id) {
-                        open(FullNote, {note: note, combo: combo})
-                    }
+        if (id != "") {
+            notes.forEach(note =>{
+                if (note.id == id) {
+                    open(FullNote, {note: note}, {}, {onClosed: () => {
+                        document.querySelectorAll('.note').forEach((note, index) => {
+                            note.addEventListener('click', (e) => {
+                                notes.forEach(note => {
+                                    let noteDiv = document.querySelectorAll('.note')[index]
+                                    if(note.id == noteDiv.id) {
+                                        open(FullNote, {note: note})
+                                        window.history.replaceState({},`${note.title}`, `/notes/${note.id}`)
+                                    }
+                                })
+                            })
+                        })
+                    }})
+                }
+            })
+        } else {
+            document.querySelectorAll('.note').forEach((note, index) => {
+                note.addEventListener('click', (e) => {
+                    notes.forEach(note => {
+                        let noteDiv = document.querySelectorAll('.note')[index]
+                        if(note.id == noteDiv.id) {
+                            open(FullNote, {note: note})
+                            window.history.replaceState({},`${note.title}`, `/notes/${note.id}`)
+                        }
+                    })
                 })
             })
-        })
+        }
     })
 </script>
 
@@ -34,7 +53,7 @@
 <div class="notes">
 <Masonry gridGap="26px">
     {#each notes as note}
-        <Note note={note} combo={cardColors[Math.floor(Math.random()*cardColors.length)]}/>
+        <Note note={note} />
     {/each}
 </Masonry>
 </div>
@@ -47,7 +66,6 @@
     align-items: center;
     flex-direction: row;
     width: 100%;
-    background-color: white;
     outline: 1px solid #D9D9D9;
 }
 .notes-header h1 {

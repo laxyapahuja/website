@@ -21,7 +21,12 @@
 		</Route>
 		<Route path="notes">
 			<Modal closeButton={false} styleContent={{display: 'flex', 'flex-direction': 'column', 'align-items': 'center', background: 'rgba(0,0,0,0)'}} styleWindow={{background: 'rgba(0,0,0,0)'}}>
-				<Notes/>
+				<Notes id=""/>
+			</Modal>
+		</Route>
+		<Route path="notes/:id" let:params>
+			<Modal closeButton={false} styleContent={{display: 'flex', 'flex-direction': 'column', 'align-items': 'center', background: 'rgba(0,0,0,0)'}} styleWindow={{background: 'rgba(0,0,0,0)'}}>
+				<Notes id="{params.id}" />
 			</Modal>
 		</Route>
 	  </main>
