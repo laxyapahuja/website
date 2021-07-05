@@ -3,6 +3,16 @@
     import ProjectLoop from '../components/ProjectLoop.svelte';
     import { onMount } from 'svelte';
 
+    if(devicePixelRatio == 1) {
+
+    } else if (devicePixelRatio == 1.25) {
+        document.body.style.zoom = 0.8
+        document.body.style.height = '125vh'
+    } else if (devicePixelRatio == 1.5) {
+        document.body.style.zoom = 0.63
+        document.body.style.height = '159vh'
+    }
+
     let code = true;
     let design = false;
     let films = false;

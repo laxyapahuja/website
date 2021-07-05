@@ -66,7 +66,7 @@
     }
     .cards div {
         overflow-y:auto;
-        max-height: 32vh;
+        max-height: 312px;
     }
     .cards h3 {
         font-size: 24px;

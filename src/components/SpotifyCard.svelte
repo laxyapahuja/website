@@ -141,7 +141,7 @@
         flex-direction: column;
         flex: 1.3;
         width: 100%;
-        height: 32vh;
+        height: 312px;
         border-radius: 16px;
         margin-right: 22px;
         transition: background 1s;
