@@ -22,11 +22,7 @@ const cardsArray = async() => {
     returnArray.push(movieCardText)
     let bookCardText = 'I’ve also started reading. My favorite books are '
     let bookList = []
-    if (window.innerWidth < 1000) {
-        bookList = await getFavoritesAndCurrentBooksMobile();
-    } else {
-        bookList = await getFavoritesAndCurrentBooks();
-    }
+    bookList = await getFavoritesAndCurrentBooks();
     for (let i = 0; i < bookList.favorites.length; i++) {
         if (i == (bookList.favorites.length - 1)) {
             bookCardText += ` and <a class="cardlink" target="_blank" href="${bookList.favorites[i].link}"><i>${bookList.favorites[i].title}</i>.</a>`

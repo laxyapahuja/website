@@ -6,17 +6,19 @@
     onMount(() => {
         document.querySelector(`#${note.id}-full`).style.backgroundColor = note.bgColor
         document.querySelector(`#${note.id}-full`).style.color = note.color
-        document.querySelector(`#${note.id}-full > div > h2`).style.color = note.color
+        document.querySelector(`#${note.id}-full > div > div > h2`).style.color = note.color
     })
 </script>
 
 <div class="note-full" id="{note.id}-full">
     <div class="note-header" id="{note.id}-header">
-        {note.publishedDate} - {note.tag}
+        {note.publishedDate} • {note.tag}
     </div>
     <div class="note-body markdown-body" id="{note.id}-body">
-        <h1>{note.title}</h1>
-        <h2>{@html marked(note.content)}</h2>
+        <div>
+            <h1>{note.title}</h1>
+            <h2>{@html marked(note.content)}</h2>
+        </div>
     </div>
 </div>
 
@@ -27,6 +29,7 @@
     border-radius: 25px;
     box-shadow: 0 4px 30px rgb(0 0 0 / 15%);
     transition: all 0.5s;
+    overflow-y: hidden;
 }
 .note-header {
     padding: 20px 25px 5px 25px;
@@ -39,10 +42,14 @@
 
 .note-body {
     max-height: 550px;
+    overflow-y: hidden;
+}
+
+.note-body div {
+    max-height: 550px;
     overflow-y: auto;
     padding: 10px 25px 20px 25px;
 }
-
 
 .note-full h2 {
     font-size: 16px;

@@ -3,7 +3,7 @@
     let cards = cardsArray();
     cards.then(cards => {
         const card = document.getElementsByClassName('cards')[0]
-        const cardText = document.querySelector('.cards > h3')
+        const cardText = document.querySelector('.cards > div > h3')
         const cardLink = document.getElementsByClassName('cardlink')
         let i = 1;
         let t;
@@ -40,7 +40,7 @@
     })
 </script>
 
-<div class=cards>
+<div class="cards">
     <style>
     .cardlink {
         text-decoration: none;
@@ -48,7 +48,9 @@
         font-weight: 600;
     }
     </style>
-    <h3>Fetching data from my <a class="cardlink" href="https://github.com/laxyapahuja">GitHub</a>, <a class="cardlink" href="https://www.goodreads.com/user/show/15850881-laxya-pahuja">Goodreads</a> & <a class="cardlink" href="https://letterboxd.com/laxyapahuja">Letterboxd</a> accounts dynamically. Please wait...</h3>
+    <div>
+        <h3>Fetching data from my <a class="cardlink" href="https://github.com/laxyapahuja">GitHub</a>, <a class="cardlink" href="https://www.goodreads.com/user/show/15850881-laxya-pahuja">Goodreads</a> & <a class="cardlink" href="https://letterboxd.com/laxyapahuja">Letterboxd</a> accounts dynamically. Please wait...</h3>
+    </div>
 </div>
 
 <style>
@@ -60,7 +62,11 @@
         margin-left: 0.5vw;
         background-color: #FF7A7A;
         transition: all 1s;
+        overflow: hidden;
+    }
+    .cards div {
         overflow-y:auto;
+        max-height: 32vh;
     }
     .cards h3 {
         font-size: 24px;

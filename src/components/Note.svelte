@@ -17,7 +17,7 @@
         }
     </style>
     <div class="note-header">
-        {note.publishedDate} - {note.tag}
+        {note.publishedDate} • {note.tag}
     </div>
     <div class="note-body">
         <h1>{note.title}</h1>
