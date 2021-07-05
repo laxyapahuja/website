@@ -12,7 +12,7 @@
 
 <div class="note-full" id="{note.id}-full">
     <div class="note-header" id="{note.id}-header">
-        27/06/20 • {note.tag}
+        {note.publishedDate} - {note.tag}
     </div>
     <div class="note-body markdown-body" id="{note.id}-body">
         <h1>{note.title}</h1>

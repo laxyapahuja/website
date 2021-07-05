@@ -11,8 +11,13 @@
 </script>
 
 <div class="note" id={note.id}>
+    <style>
+        .note-body a {
+            color: inherit;
+        }
+    </style>
     <div class="note-header">
-        27/06/20 • {note.tag}
+        {note.publishedDate} - {note.tag}
     </div>
     <div class="note-body">
         <h1>{note.title}</h1>
@@ -48,7 +53,6 @@
 .note-body {
     padding: 10px 25px 20px 25px;
 }
-
 
 .note h2 {
     font-size: 16px;

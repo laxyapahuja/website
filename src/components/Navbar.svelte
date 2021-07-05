@@ -1,5 +1,11 @@
 <script>
     import {Link} from 'svelte-navigator';
+
+    let path = window.location.pathname
+
+    window.addEventListener("click", (e) => {
+        path = window.location.pathname;
+    })
 </script>
 
 <style>
@@ -58,10 +64,26 @@
             <a href="/">laxya.co</a>
         </div>
         <div class="navlinks">
-            <Link to="/projects" style="text-decoration: none;"><span class="navtext">Projects</span></Link>
-            <Link to="/notes" style="text-decoration: none;"><span class="navtext" href="/notes">Notes</span></Link>
-            <Link to="/contact" style="text-decoration: none;"><span class="navtext" href="/contact">Contact</span></Link>
-            <Link to="/resume" style="text-decoration: none;"><span class="navtext" href="/resume">Resume</span></Link>
+            {#if path === "/projects"}
+                <Link to="/projects" style="text-decoration: none;"><span class="navtext" style="font-weight: 500; color: black;">Projects</span></Link>
+            {:else}
+                <Link to="/projects" style="text-decoration: none;"><span class="navtext">Projects</span></Link>
+            {/if}
+            {#if path.startsWith("/notes")}
+                <Link to="/notes" style="text-decoration: none;"><span class="navtext" style="font-weight: 500; color: black;">Notes</span></Link>
+            {:else}
+                <Link to="/notes" style="text-decoration: none;"><span class="navtext">Notes</span></Link>
+            {/if}
+            {#if path === "/contact"}
+                <Link to="/contact" style="text-decoration: none;"><span class="navtext" style="font-weight: 500; color: black;">Contact</span></Link>
+            {:else}
+                <Link to="/contact" style="text-decoration: none;"><span class="navtext">Contact</span></Link>
+            {/if}
+            {#if path === "/resume.pdf"}
+                <a href="/resume.pdf" style="text-decoration: none;" target="_blank"><span class="navtext" style="font-weight: 500; color: black;">Resume</span></a>
+            {:else}
+                <a href="/resume.pdf" style="text-decoration: none;" target="_blank"><span class="navtext">Resume</span></a>
+            {/if}
         </div>
     </div>
 </nav>

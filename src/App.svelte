@@ -6,6 +6,7 @@
 	import Projects from './pages/Projects.svelte';
 	import Notes from './pages/Notes.svelte';
 	import Modal from 'svelte-simple-modal';
+	import Contact from './pages/Contact.svelte';
 </script>
 
 <Router>
@@ -28,6 +29,9 @@
 			<Modal closeButton={false} styleContent={{display: 'flex', 'flex-direction': 'column', 'align-items': 'center', background: 'rgba(0,0,0,0)'}} styleWindow={{background: 'rgba(0,0,0,0)'}}>
 				<Notes id="{params.id}" />
 			</Modal>
+		</Route>
+		<Route path="contact">
+			<Contact/>
 		</Route>
 	  </main>
 	  <Footer />

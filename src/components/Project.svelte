@@ -1,5 +1,5 @@
 <script>
-    export let project, refreshLayout;
+    export let project, refreshLayout, type;
 </script>
 
 <div class="project">
@@ -7,6 +7,33 @@
     <div>
         <h1>{project.title} <span class="year">({project.year})</span></h1>
         <h2>{@html project.description}</h2>
+        {#if project.project}
+            <a target="_blank" href={project.project}>
+                <button>Project</button>
+            </a>
+        {/if}
+        {#if project.media}
+            {#if type == "code"}
+                <a target="_blank" href={project.media}>
+                    <button>Live</button>
+                </a>
+            {/if}
+            {#if type == "films"}
+                <a target="_blank" href={project.media}>
+                    <button>Film</button>
+                </a>
+            {/if}
+            {#if type == "design"}
+                <a target="_blank" href={project.media}>
+                    <button>Video</button>
+                </a>
+            {/if}
+            {#if type == "music"}
+                <a target="_blank" href={project.media}>
+                    <button>Song</button>
+                </a>
+            {/if}
+        {/if}
     </div>
 </div>
 
@@ -41,5 +68,17 @@
     font-size: 16px;
     color: #666666;
     font-weight: 400;
+}
+
+.project button {
+    margin-top: 15px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: none;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
 }
 </style>

@@ -14,22 +14,34 @@ const getFavoritesAndCurrentBooks = async() => {
     gdrdsFavHTML.innerHTML = resFav
     let gdrdsHTML = document.createElement('html')
     gdrdsHTML.innerHTML = res
-    let favorite = gdrdsFavHTML.querySelectorAll('meta')[0]
-    console.log(favorite)
-    let favList = favorite.getAttribute('content').split(': ')[1].split(' and ')
-    let reading = gdrdsHTML.querySelectorAll('meta')[0]
-    for (let i = 0; i < favList.length; i++) {
-        let favObject = {
-            title: '',
-            link: ''
+    if (window.outerWidth > 1800) {
+        let reading = gdrdsHTML.querySelector('#currentlyReadingReviews > div')
+        let favList = gdrdsHTML.querySelectorAll('#featured_shelf > .bigBoxBody > .bigBoxContent > .imgGrid > a')
+        for (let i = 0; i < favList.length; i++) {
+            let favObject = {
+                title: '',
+                link: ''
+            }
+            favObject.link = 'https://goodreads.com' + favList[i].getAttribute('href')
+            favObject.title = favList[i].querySelector('img').getAttribute('title')
+            returnObject.favorites.push(favObject)
         }
-        favObject.link = ``
-        favObject.title = favList[i]
-        returnObject.favorites.push(favObject)
+        returnObject.recent.link = 'https://goodreads.com' + reading.querySelector('.firstcol > a').getAttribute('href')
+        returnObject.recent.title = reading.querySelector('.firstcol > a').getAttribute('title') + ' by ' + reading.querySelector('.authorName').text
+    } else {
+        let favList = gdrdsFavHTML.querySelectorAll('.bookList > li')
+        for (let i = 0; i < favList.length; i++) {
+            let favObject = {
+                title: '',
+                link: ''
+            }
+            favObject.link = 'https://goodreads.com' + favList[i].querySelector('.bookTitle > a').getAttribute('href')
+            favObject.title = favList[i].querySelector('.bookTitle > a').text + ' by ' + favList[i].querySelector('.bookAuthor > div').innerText
+            returnObject.favorites.push(favObject)
+        }
+        returnObject.recent.link = 'https://goodreads.com' + gdrdsHTML.querySelector('.bookTitle > a').getAttribute('href')
+        returnObject.recent.title = gdrdsHTML.querySelector('.bookTitle > a').text + ' by ' + gdrdsHTML.querySelector('.bookAuthor > div').innerText
     }
-    returnObject.recent.link = ``
-    returnObject.recent.title = reading.getAttribute('content').split('reading ')[1].split(',')[0]
-    console.log(returnObject)
     return returnObject
 }
 

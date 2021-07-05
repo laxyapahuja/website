@@ -9,6 +9,8 @@
     let opensource = false;
     let music = false;
 
+    document.querySelector('body').style.background = '#FFFFFF'
+
     onMount(() => {
         document.getElementById('code-button').addEventListener('click', () => {
         document.querySelector('.active').classList.remove('active')
@@ -77,19 +79,19 @@
 </nav>
 <div class="projects">
     {#if code}
-        <ProjectLoop projects={projects.code}/>
+        <ProjectLoop projects={projects.code} type="code"/>
     {/if}
     {#if design}
-        <ProjectLoop projects={projects.design}/>
+        <ProjectLoop projects={projects.design} type="design"/>
     {/if}
     {#if films}
-        <ProjectLoop projects={projects.films}/>
+        <ProjectLoop projects={projects.films} type="films"/>
     {/if}
     {#if opensource}
-        <ProjectLoop projects={projects.opensource}/>
+        <ProjectLoop projects={projects.opensource} type="opensource"/>
     {/if}
     {#if music}
-        <ProjectLoop projects={projects.music}/>
+        <ProjectLoop projects={projects.music} type="music"/>
     {/if}
 </div>
 
