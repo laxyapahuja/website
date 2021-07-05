@@ -1,13 +1,6 @@
 <script>
     import Cards from '../components/Cards.svelte'
     import SpotifyCard from '../components/SpotifyCard.svelte'
-
-    if (devicePixelRatio == 1.25) {
-        document.body.style.zoom = 0.8
-    } else if (devicePixelRatio = 1.5) {
-        document.body.style.zoom = 0.7
-    }
-
 </script>
 
 

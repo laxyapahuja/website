@@ -6,12 +6,6 @@
     import { getContext, onMount } from 'svelte';
     import FullNote from '../components/FullNote.svelte';
 
-    if (devicePixelRatio == 1.25) {
-        document.body.style.zoom = 0.8
-    } else if (devicePixelRatio = 1.5) {
-        document.body.style.zoom = 0.7
-    }
-
     const { open, closed } = getContext('simple-modal');
 
     document.querySelector('body').style.background = '#FFFFFF'
