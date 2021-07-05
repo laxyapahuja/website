@@ -1,5 +1,5 @@
 <script>
-
+    document.querySelector('body').style.background = '#FFFFFF'
 </script>
 
 <div class="contact">

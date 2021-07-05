@@ -16,7 +16,7 @@
                     i love to develop solutions to problems prevalent around me. i'm primarily interested in <b>mobile & web development</b>, although I've also built text editor extensions for clients. although i use <b>ts, js and python</b> for my projects, i'm trying my best to expand my skillset to reach new horizons.
                     <br/>
                     <br/>
-                    i'm a huge <b>film making enthusiast</b> and have also worked on some films of my own before. initially starting off as an editor and a <i>motion designer</i>, i've now started <i>directing</i> and <i>writing</i> my own films.</p>    
+                    i'm a huge <b>film making enthusiast</b> and have also worked on some films of my own before. initially starting off as an <i>editor</i> and a <i>motion designer</i>, i've now started <i>directing</i> and <i>writing</i> my own films.</p>    
             </div>
         </div>
         <div class="activity">

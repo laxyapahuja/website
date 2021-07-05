@@ -14,7 +14,7 @@ const getFavoritesAndCurrentBooks = async() => {
     gdrdsFavHTML.innerHTML = resFav
     let gdrdsHTML = document.createElement('html')
     gdrdsHTML.innerHTML = res
-    if (window.outerWidth > 1800) {
+    if (window.outerWidth > 1500) {
         let reading = gdrdsHTML.querySelector('#currentlyReadingReviews > div')
         let favList = gdrdsHTML.querySelectorAll('#featured_shelf > .bigBoxBody > .bigBoxContent > .imgGrid > a')
         for (let i = 0; i < favList.length; i++) {
