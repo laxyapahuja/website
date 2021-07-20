@@ -19,12 +19,12 @@ const getFavoritesAndRecentMovie = async() => {
             title: '',
             link: ''
         }
-        favObject.title = favList[i].querySelector('div').getAttribute('data-film-name')
-        favObject.link = `https://letterboxd.com${favList[i].querySelector('div').getAttribute('data-film-link')}`
+        favObject.title = favList[i].querySelector('div > img').getAttribute('alt')
+        favObject.link = `https://letterboxd.com${favList[i].querySelector('div').getAttribute('data-film-slug')}`
         returnObject.favorites.push(favObject)
     }
-    returnObject.recent.title = recentList[0].querySelector('div').getAttribute('data-film-name')
-    returnObject.recent.link = `https://letterboxd.com${recentList[0].querySelector('div').getAttribute('data-film-link')}`
+    returnObject.recent.title = recentList[0].querySelector('div > img').getAttribute('alt')
+    returnObject.recent.link = `https://letterboxd.com${recentList[0].querySelector('div').getAttribute('data-film-slug')}`
     returnObject.recent.rating = parseInt(recentList[0].querySelector('p > span').className.split('rating rated-')[1]) / 2;
     if (recentList[0].querySelector('p').innerHTML.includes('rewatch')) {
         returnObject.recent.rewatched = true
